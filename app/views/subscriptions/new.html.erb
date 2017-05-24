@@ -1,0 +1,14 @@
+<h1>Subscriptions#new</h1>
+<p>Find me in app/views/subscriptions/new.html.erb</p>
+<%= javascript_include_tag "https://js.paystack.co/v1/paystack.js"%>
+<%= form_tag subscriptions_path, id: "paystack-card-form" do %>
+  <%= text_field_tag :card_number, nil, class:"form-control", "data-paystack" => "number"%>
+
+  <%= text_field_tag :cvv, nil, class:"form-control", "data-paystack" => "cvv"%>
+
+  <%= text_field_tag :exp_month, nil, class:"form-control", "data-paystack" => "expiryMonth"%>
+
+  <%= text_field_tag :exp_year, nil, class:"form-control", "data-paystack" => "expiryYear"%>
+
+  <%= submit_tag "Pay","data-paystack" => "submit"  %>
+<% end %>
