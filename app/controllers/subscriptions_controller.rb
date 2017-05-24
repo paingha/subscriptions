@@ -9,7 +9,7 @@ end
   	transactions = PaystackTransactions.new(paystackObj)
 	result = transactions.initializeTransaction(
 		:reference => "blab",
-		:amount => 300000,
+		:amount => 500000,
 		:email => current_user.email,
 		)
 	auth_url = result['data']['authorization_url']
@@ -17,8 +17,9 @@ end
   	subscriptions = PaystackSubscriptions.new(paystackObj)
 	result = subscriptions.create(
 
-				:customer => current_user.email,
+				:customer => #{current_user.email},
 				:plan => "PLN_67c5kydt1306owr", #plan id
+				:amount => 500000,
 			)
 
   end
