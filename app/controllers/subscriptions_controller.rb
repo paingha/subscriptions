@@ -17,7 +17,7 @@ end
   	subscriptions = PaystackSubscriptions.new(paystackObj)
 	result = subscriptions.create(
 
-				:customer => #{current_user.email},
+				:customer => current_user.email,
 				:plan => "PLN_67c5kydt1306owr", #plan id
 				:amount => 500000,
 			)
