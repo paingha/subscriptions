@@ -8,16 +8,16 @@ end
   	paystackObj = Paystack.new
   	transactions = PaystackTransactions.new(paystackObj)
 	result = transactions.initializeTransaction(
-		:reference => "blab",
+		:reference => "apeelit",
 		:amount => 500000,
-		:email => current_user.email,
+		:email => "apeelit@gmail.com",
 		)
 	auth_url = result['data']['authorization_url']
 
   	subscriptions = PaystackSubscriptions.new(paystackObj)
 	result = subscriptions.create(
 
-				:customer => current_user.email,
+				:customer => "apeelit@gmail.com",
 				:plan => "PLN_67c5kydt1306owr", #plan id
 				:amount => 500000,
 			)
