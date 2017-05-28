@@ -5,7 +5,8 @@ def new
 end
 
   def create
-  	paystackObj = Paystack.new
+
+  	paystackObj = Paystack.new(ENV['PAYSTACK_PUBLIC_KEY'], ENV['PAYSTACK_PRIVATE_KEY'])
   	transactions = PaystackTransactions.new(paystackObj)
 	result = transactions.initializeTransaction(
 		:reference => "apeelit",
@@ -14,6 +15,8 @@ end
 		)
 	auth_url = result['data']['authorization_url']
 
+	
+  	paystackObj = Paystack.new(ENV['PAYSTACK_PUBLIC_KEY'], ENV['PAYSTACK_PRIVATE_KEY'])
   	subscriptions = PaystackSubscriptions.new(paystackObj)
 	result = subscriptions.create(
 

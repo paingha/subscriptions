@@ -35,6 +35,7 @@ gem 'devise'
 
 gem 'paystack'
 gem 'figaro'
+gem 'http-client'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

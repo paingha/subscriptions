@@ -7,7 +7,8 @@ class User < ApplicationRecord
    after_commit :create_customer, on: :create
  
   def create_customer
-    paystackObj = Paystack.new
+  	
+  	paystackObj = Paystack.new(ENV['PAYSTACK_PUBLIC_KEY'], ENV['PAYSTACK_PRIVATE_KEY'])
   	customers = PaystackCustomers.new(paystackObj)
 	result = customers.create(
 		:first_name => first_name,
