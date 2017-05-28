@@ -15,8 +15,13 @@ end
 		)
 	auth_url = result['data']['authorization_url']
 
+  	subscriptions = PaystackSubscriptions.new(paystackObj)
+	result = subscriptions.create(
 
-  	
+				:customer => "apeelit@gmail.com",
+				:plan => "PLN_67c5kydt1306owr", #plan id
+				:amount => 500000,
+			)
 
   end
 
