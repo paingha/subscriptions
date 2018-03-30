@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   get 'plans/edit'
 
-
+  #Callback Url for Paystack after payment to create subscription /start
+  get 'subscriptions/success'
+  
   resources :videos
   
   resources :subscriptions
