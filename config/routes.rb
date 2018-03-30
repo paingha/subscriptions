@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :transactions
   get 'plans/new'
 
   get 'plans/index'
