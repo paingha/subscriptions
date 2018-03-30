@@ -3,6 +3,22 @@ class TransactionsController < ApplicationController
 def new
 end
 
+#Webhook Url for Paystack after payment to create transaction 
+
+  def success
+    if params[:reference].present?
+
+      redirect_to root_path, notice: "Sucessful Payment"
+    
+    else
+    redirect_to new_subscription_path, notice: "Error Making Payment, Try Again"
+
+    end
+  end
+
+#End
+
+
   def create
 
   	paystackObj = Paystack.new(ENV['PAYSTACK_PUBLIC_KEY'], ENV['PAYSTACK_PRIVATE_KEY'])
@@ -23,11 +39,5 @@ end
   def edit
   end
 
-  def disable
-  	subscriptions = PaystackSubscriptions.new(paystackObj)
-	result = subscriptions.disable(
-				:code => "12328833",
-				:token => "EWFWKFJWE" #user email token
-			)
-  end
+  
 end

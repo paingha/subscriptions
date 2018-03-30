@@ -14,6 +14,6 @@ To Do:
 
 * Setup an example to use paystack js
 
-* Setup a webhook for paystack
+* Setup a webhook for paystack ✔
 
 Contributions are Welcome!

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   #Callback Url for Paystack after payment to create subscription /start
   get 'subscriptions/success'
+  #Callback Url for Paystack after payment to create trnsaction 
+  get 'transactions/success'
   
   resources :videos
   
