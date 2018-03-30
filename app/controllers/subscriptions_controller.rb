@@ -9,9 +9,9 @@ end
   	paystackObj = Paystack.new(ENV['PAYSTACK_PUBLIC_KEY'], ENV['PAYSTACK_PRIVATE_KEY'])
   	transactions = PaystackTransactions.new(paystackObj)
 	result = transactions.initializeTransaction(
-		:reference => "apeelit",
+		:reference => "must be unique here",
 		:amount => 500000,
-		:email => "apeelit@gmail.com",
+		:email => "test@gmail.com",
 		)
 	auth_url = result['data']['authorization_url']
 

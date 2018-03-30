@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Just a repo to help show people how to use the paystack ruby gem.
 
-Things you may want to cover:
+To Do:
 
-* Ruby version
+* Finish Subscriptions Controller
 
-* System dependencies
+* Finish Subscriptions Views
 
-* Configuration
+* Finish Transactions Controller
 
-* Database creation
+* Finish Transactions Views
 
-* Database initialization
+* Setup an example to use paystack js
 
-* How to run the test suite
+* Setup a webhook for paystack
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Contributions are Welcome!
